@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Answer!</title>
+    <link rel="stylesheet" href="../css/answers.css">
+    <script src="https://kit.fontawesome.com/836330d4ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label div class="logo">AllTheAnswers!</label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="help.html">Help</a></li>
+        </ul>        
+    </nav>
+    <section id="background">
+        <div id="quote-container">
+          <h1 id="quote-container-heading">Great question! Have you tried talking to...</h1>
+      
+          <p id="quote">
+            Anyone?
+          </p>
+          <div class="avatar">
+            <img src="../media/images/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" alt="">
+        </div>
+        <br>
+          <div class="cannot">
+            <a class="button">I can't do that!</a>  
+          </div>
+        </div>
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+      
+        var quotes = ["A Friend?", "Your Crush?", "The Void?", "Your Childhood Hero?", "Your Childhood Bully?", "Mother Nature?", "The Microwave?", "The Walls?", "The Rain?", "The Mirror?","Someone on the Street?", "Your Kindergarten Teacher?","Your Mom?", "Your Dad?", "Your Sibling?","God?","Allah?","A Priest?", "A Pastor?","A Rabbi?", "A Doctor?", "A Therapist?", "A Medical Professional?", "A Stranger?", "Your Childhood Friends?", "Your Significant Other?", "The Moon?", "The Stars?", "A Prophet?", "Yourself?"];
+      
+        $('.button').click(function() {
+      
+          randomNum = Math.floor(Math.random() * quotes.length);
+      
+          $("#quote").text(quotes[randomNum]);
+      
+          $("#author").text(author[randomNum]);
+      });
+      
+      });
+      </script> 
+</body>
+</html>

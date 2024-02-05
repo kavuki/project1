@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need Help?</title>
+    <link rel="stylesheet" href="../css/help.css">
+    <script src="https://kit.fontawesome.com/836330d4ce.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label div class="logo">AllTheAnswers!</label>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a class="active" href="help.html">Help</a></li>
+        </ul>        
+    </nav>
+    <style>
+        #container {
+            margin: 0px auto;
+            padding-top: 20px;
+            width: 500px;
+            height: 375px;
+        }
+        #videoElement {
+            width: 500px;
+            height: 375px;
+            background-color: #666;
+        }
+        </style>
+        </head>
+         <h1> 
+            <br>
+            Need Help?
+         </h1>
+        <body>
+        <div id="container">
+            <video autoplay="true" id="videoElement">
+            
+            </video>
+        </div>
+    <script>
+        var video = document.querySelector("#videoElement");
+
+        if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+            video.srcObject = stream;
+            })
+            .catch(function (err0r) {
+            console.log("Something went wrong!");
+            });
+        }
+    </script>
+    <h2>
+        <br>
+        Enjoy these calming sounds of nature while you contemplate what is wrong with you.
+        <br>
+    </h2>
+    <audio src="../media/audio/09-Meydan-Contemplate-the-stars(chosic.com).mp3" autoplay></audio>
+</body>
+</html>
